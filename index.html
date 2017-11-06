@@ -13,6 +13,12 @@
     <script src="//cdn.jsdelivr.net/phaser/2.2.2/phaser.min.js"></script>
 </head>
 <body>
+
+    
+<audio autoplay loop>
+       <source src="assets/The Smurfs Theme Song La La La.mp3">
+</audio>
+    
     
     
     <script type="text/javascript">
@@ -244,6 +250,10 @@
 
         eatDot: function (pacman, dot) {
             
+            var audio = new Audio('assets/Dot_sound.mp3');
+
+            audio.play()
+            
             this.score+=10;
 
             this.scoreText.text= 'Score: ' + this.score;
@@ -260,6 +270,9 @@
         },
 
         eatDot2: function (pacman, dot2) {
+            
+             var audio = new Audio('assets/Bonus_sound.mp3');
+            audio.play()
             
             this.score+=50;
             this.bonus+=50;
